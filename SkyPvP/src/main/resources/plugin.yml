@@ -1,0 +1,11 @@
+name: SkyPvPPlugin
+version: 1.0
+author: KeinOptifine
+main: eu.brickpics.skypvpplugin.main.SkyPvPPlugin
+commands:
+  kit:
+    description: Open the GUI to choose a kit
+  kitarmorstand:
+  event:
+
+

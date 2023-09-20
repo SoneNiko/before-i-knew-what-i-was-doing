@@ -1,0 +1,6 @@
+name: StairSeat
+version: ${project.version}
+main: eu.brickpics.stairseat.StairSeat
+api-version: 1.16
+authors: [ KeinOptifine ]
+description: Sit on Stairs

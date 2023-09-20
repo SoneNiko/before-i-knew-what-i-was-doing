@@ -1,0 +1,10 @@
+name: StaffSys
+version: ${project.version}
+main: eu.brickpics.staffsys.StaffSys
+prefix: StaffSys
+authors: [KeinOptifine]
+description: StaffSystem
+website: https://brickpics.eu
+commands:
+  register:
+    usage: /register <name> <punishment> <endtime>

@@ -1,0 +1,10 @@
+name: MentionSys
+version: @version@
+main: eu.brickpics.mentionsys.MentionSys
+api-version: 1.16
+prefix: MentionSys
+authors: [ KeinOptifine, geknuddelt ]
+description: Message System
+website: https:/www.brickpics.eu/
+depend:
+  - AppearanceManager

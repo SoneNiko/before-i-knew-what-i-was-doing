@@ -1,0 +1,3 @@
+name: DMSys
+version: ${project.version}
+main: eu.brickpics.dmsys.DMSys

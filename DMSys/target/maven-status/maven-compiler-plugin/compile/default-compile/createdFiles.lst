@@ -1,0 +1,7 @@
+eu\brickpics\dmsys\commands\CommandTest.class
+eu\brickpics\dmsys\commands\CommandMsg.class
+eu\brickpics\dmsys\manager\SpyManager.class
+eu\brickpics\dmsys\util\NotificationUtil.class
+eu\brickpics\dmsys\commands\CommandSpy.class
+eu\brickpics\dmsys\util\NameUtil.class
+eu\brickpics\dmsys\DMSys.class

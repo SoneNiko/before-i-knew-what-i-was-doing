@@ -1,0 +1,9 @@
+name: Gungame
+version: ${project.version}
+main: eu.brickpics.gungame.main.GunGame
+api-version: 1.8
+commands:
+  stats:
+    usage: /stats
+    description: Statistics
+  test:

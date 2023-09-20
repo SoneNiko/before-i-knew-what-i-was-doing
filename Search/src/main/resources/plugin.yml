@@ -1,0 +1,7 @@
+name: Search
+version: @version@
+main: eu.brickpics.search.Search
+api-version: 1.16
+commands:
+  search-user:
+    permission: search.use
