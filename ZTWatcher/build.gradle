@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+group = 'me.sonefall'
+version = '1.0.0-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
