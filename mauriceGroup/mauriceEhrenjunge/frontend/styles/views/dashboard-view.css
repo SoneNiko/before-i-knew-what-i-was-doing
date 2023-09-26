@@ -1,0 +1,10 @@
+.user-name {
+    font-size: var(--lumo-font-size-s);
+    margin: var(--lumo-space-xs);
+    font-style: normal;
+}
+.user-uuid {
+    font-size: var(--lumo-font-size-xxs);
+    margin: var(--lumo-space-xs);
+    font-style: italic;
+}

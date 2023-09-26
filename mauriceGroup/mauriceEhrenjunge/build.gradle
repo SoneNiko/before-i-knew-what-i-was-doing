@@ -1,0 +1,95 @@
+plugins {
+    id 'org.springframework.boot' version '2.4.1'
+    id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+    id 'java'
+    id 'com.vaadin' version '0.14.3.7'
+    id 'org.hidetake.ssh' version '2.10.1'
+}
+
+group = 'eu.brickpics'
+version = '0.0.1-RELEASE'
+sourceCompatibility = '1.8'
+
+repositories {
+    jcenter()
+    maven { url "http://maven.vaadin.com/vaadin-addons" }
+    maven {
+        url "http://repo.spring.io/libs-milestone"
+        name "Spring Maven MILESTONE Repository"
+    }
+}
+
+ext {
+    set('vaadinVersion', "14.4.+")
+}
+
+dependencies {
+    compile 'com.flowingcode.addons:xterm-console:1.0.2'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    compile 'de.codecamp.vaadin:vaadin-security-spring-boot-starter:0.9.5'
+
+    implementation 'com.vaadin:vaadin-spring-boot-starter'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+    compile 'org.springframework.data:spring-data-jdbc:2.1.2'
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    compile 'mysql:mysql-connector-java'
+    compile 'org.springframework:spring-beans:5.3.2'
+
+    implementation "com.vaadin:vaadin-core:${vaadinVersion}"
+
+    implementation 'com.vaadin:vaadin'
+
+
+
+
+    implementation 'org.apache.commons:commons-lang3:3.11'
+    compile files(
+            'lib/javax.ejb.jar',
+            'lib/javax.jms.jar',
+            'lib/javax.persistence.jar',
+            'lib/javax.resource.jar',
+            'lib/javax.servlet.jsp.jar',
+            'lib/javax.servlet.jsp.jstl.jar',
+            'lib/javax.transaction.jar',
+            'lib/rkon-core-1.1.2.jar'
+    )
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "com.vaadin:vaadin-bom:${vaadinVersion}"
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+remotes {
+    brickpics {
+        host = 'brickpics.eu'
+        user = 'minecraft'
+        password = 'Sonnenschein123'
+    }
+}
+
+task uploadToFTP {
+    doLast {
+        ssh.run {
+            session(remotes.brickpics) {
+                put(from: file('build/libs/maurice-0.0.1-SNAPSHOT.jar'), into: '/home/minecraft/Maurice')
+            }
+        }
+    }
+}
+
+bootJar {
+    launchScript()
+}
+
+vaadin {
+    pnpmEnable = false
+    productionMode = true
+    optimizeBundle = true
+}

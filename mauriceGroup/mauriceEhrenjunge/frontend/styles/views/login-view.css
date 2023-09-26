@@ -1,0 +1,36 @@
+/*url('https://brickpics.eu/static/images/3_blurred.jpg')*/
+/*#backdrop {*/
+/*    background-image: url(frontend/login-view-background.jpg);*/
+/*    background-size: cover;*/
+/*    background-attachment: fixed;*/
+/*}*/
+/**/
+/*body {*/
+/*    background-image: url(frontend/login-view-background.jpg);*/
+/*    background-size: cover;*/
+/*    background-attachment: fixed;*/
+/*}*/
+/**/
+/*#backdrop {*/
+/*    background-image: url('frontend/login-view-background.jpg');*/
+/*    background-size: cover;*/
+/*    background-attachment: fixed;*/
+/*}*/
+/**/
+/*body {*/
+/*    background-image: url('frontend/login-view-background.jpg');*/
+/*    background-size: cover;*/
+/*    background-attachment: fixed;*/
+/*}*/
+/**/
+/*[part="backdrop"] {*/
+/*    background-image: url('frontend/login-view-background.jpg');*/
+/*    background-size: cover;*/
+/*    background-attachment: fixed;*/
+/*}*/
+
+[part="backdrop"] {
+    background-image: url(frontend/login-view-background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}

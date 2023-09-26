@@ -1,0 +1,6 @@
+h1 {
+    font-size: var(--lumo-font-size-xl);
+}
+h5 {
+    font-size: var(--lumo-font-size-m);
+}

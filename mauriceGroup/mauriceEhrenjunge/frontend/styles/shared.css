@@ -1,0 +1,40 @@
+.shadow.xs {
+    box-shadow: var(--lumo-box-shadow-xs);
+}
+.shadow.s {
+    box-shadow: var(--lumo-box-shadow-s);
+}
+.shadow.m {
+    box-shadow: var(--lumo-box-shadow-m);
+}
+.shadow.l {
+    box-shadow: var(--lumo-box-shadow-l);
+}
+.shadow.xl {
+    box-shadow: var(--lumo-box-shadow-xl);
+    width: calc(var(--lumo-size-xl) * 1.2);
+    height: calc(var(--lumo-size-xl) * 1.2);
+}
+.pointer {
+    --lumo-clickable-cursor: pointer;
+    cursor: var(--lumo-clickable-cursor);
+}
+
+.card.xs {
+    margin: var(--lumo-space-xs);
+}
+.card.s {
+    margin: var(--lumo-space-s);
+}
+.card.m {
+    margin: var(--lumo-space-m);
+}
+.card.l {
+    margin: var(--lumo-space-l);
+
+}
+.card.xl {
+    margin: var(--lumo-space-xl);
+    width: calc(var(--lumo-size-xl) * 1.2);
+    height: calc(var(--lumo-size-xl) * 1.2);
+}
